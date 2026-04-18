@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Variable Conv Assignment</title>
+
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://tactlabs.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://tactlabs.github.io/pynotes">title</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://tactlabs.github.io/pynotes/variable-conv-assignment.html" rel="bookmark"
+        title="Permalink to Variable Conv Assignment">Variable Conv Assignment</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1"># 1. Implicit Type Conversion (Type Coercion)</span>
+
+<span class="n">integer_value</span> <span class="o">=</span> <span class="mi">10</span>       <span class="c1"># int</span>
+<span class="n">float_value</span> <span class="o">=</span> <span class="mf">3.5</span>       <span class="c1"># float</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">integer_value</span> <span class="o">+</span> <span class="n">float_value</span>  <span class="c1"># int + float → float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>           <span class="c1"># Output: 13.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>     <span class="c1"># Output: &lt;class &#39;float&#39;&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">13.5</span>
+<span class="o">&lt;</span><span class="n">class</span><span class="w"> </span><span class="err">&#39;</span><span class="n">float</span><span class="err">&#39;</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">float_value</span> <span class="o">=</span> <span class="mf">9.99</span>
+<span class="n">string_value</span> <span class="o">=</span> <span class="s2">&quot;42&quot;</span>
+
+<span class="n">int_from_float</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">float_value</span><span class="p">)</span>
+<span class="n">int_from_string</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string_value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">int_from_float</span><span class="p">)</span>    <span class="c1"># Output: 9   (fraction truncated)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">int_from_string</span><span class="p">)</span>   <span class="c1"># Output: 42</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">9</span>
+<span class="mf">42</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">int_value</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">string_value</span> <span class="o">=</span> <span class="s2">&quot;3.14&quot;</span>
+
+<span class="n">float_from_int</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">int_value</span><span class="p">)</span>
+<span class="n">float_from_string</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">string_value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">float_from_int</span><span class="p">)</span>      <span class="c1"># Output: 7.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">float_from_string</span><span class="p">)</span>   <span class="c1"># Output: 3.14</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">7.0</span>
+<span class="mf">3.14</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">int_value</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">float_value</span> <span class="o">=</span> <span class="mf">25.5</span>
+<span class="n">bool_value</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="n">str_int</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">int_value</span><span class="p">)</span>
+<span class="n">str_float</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">float_value</span><span class="p">)</span>
+<span class="n">str_bool</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">bool_value</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">str_int</span><span class="p">)</span>    <span class="c1"># Output: &#39;100&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str_float</span><span class="p">)</span>  <span class="c1"># Output: &#39;25.5&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str_bool</span><span class="p">)</span>   <span class="c1"># Output: &#39;True&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">100</span>
+<span class="mf">25.5</span>
+<span class="n">True</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>        <span class="c1"># Output: False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>        <span class="c1"># Output: True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">))</span>       <span class="c1"># Output: False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">))</span>   <span class="c1"># Output: True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">([]))</span>       <span class="c1"># Output: False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>   <span class="c1"># Output: True</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>False
+True
+False
+True
+False
+True
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;python&quot;</span>
+
+<span class="c1"># String to list of characters</span>
+<span class="n">char_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">char_list</span><span class="p">)</span>  <span class="c1"># Output: [&#39;p&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;]</span>
+
+<span class="c1"># List of strings to single string</span>
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Type&quot;</span><span class="p">,</span> <span class="s2">&quot;Conversion&quot;</span><span class="p">]</span>
+<span class="n">joined</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span>     <span class="c1"># Output: Python Type Conversion</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">[&#39;p&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;]</span>
+<span class="na">Python Type Conversion</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="n">numbers_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
+<span class="n">numbers_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">numbers_list</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers_tuple</span><span class="p">)</span>  <span class="c1"># Output: (1, 2, 2, 3)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers_set</span><span class="p">)</span>    <span class="c1"># Output: {1, 2, 3}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>(1, 2, 2, 3)
+{1, 2, 3}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">pairs_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<span class="n">pairs_tuple</span> <span class="o">=</span> <span class="p">((</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+<span class="n">dict_from_list</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">pairs_list</span><span class="p">)</span>
+<span class="n">dict_from_tuple</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">pairs_tuple</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dict_from_list</span><span class="p">)</span>   <span class="c1"># Output: {&#39;a&#39;: 1, &#39;b&#39;: 2}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict_from_tuple</span><span class="p">)</span>  <span class="c1"># Output: {&#39;x&#39;: 10, &#39;y&#39;: 20}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: 1, &#39;b&#39;: 2}
+{&#39;x&#39;: 10, &#39;y&#39;: 20}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">safe_int_convert</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cannot convert &#39;</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&#39; to int. Defaulting to 0.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">safe_int_convert</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">))</span>   <span class="c1"># Output: 123</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">safe_int_convert</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">))</span>   <span class="c1"># Output: Cannot convert &#39;abc&#39; to int. Defaulting to 0.</span>
+                                 <span class="c1">#         0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">123</span>
+<span class="n">Cannot</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="err">&#39;</span><span class="n">abc</span><span class="err">&#39;</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="nb">int</span><span class="mf">.</span><span class="w"> </span><span class="kd">Def</span><span class="n">aulting</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="mf">0.</span>
+<span class="mf">0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Score</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">points</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="n">points</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Score: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">points</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__int__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">points</span>
+
+<span class="n">player_score</span> <span class="o">=</span> <span class="n">Score</span><span class="p">(</span><span class="mi">95</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">player_score</span><span class="p">))</span>  <span class="c1"># Output: Score: 95</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">player_score</span><span class="p">))</span>  <span class="c1"># Output: 95</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Score: 95
+95
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">list</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Raj&quot;</span><span class="p">,</span> <span class="s2">&quot;Krish&quot;</span><span class="p">,</span> <span class="s2">&quot;Shiv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">list</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Raj&quot;</span><span class="p">,</span> <span class="s2">&quot;Krish&quot;</span><span class="p">,</span> <span class="s2">&quot;Shiv&quot;</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="k">return</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nv">Cell</span><span class="w"> </span><span class="nv">In</span>[<span class="mi">5</span>],<span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="ss">(</span><span class="nv">len</span><span class="ss">(</span><span class="nv">list</span><span class="ss">))</span>
+<span class="w">    </span><span class="o">^</span>
+<span class="nv">IndentationError</span>:<span class="w"> </span><span class="nv">unexpected</span><span class="w"> </span><span class="nv">indent</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">count_vowels</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">s</span> <span class="k">if</span> <span class="n">char</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="s2">&quot;aeiou&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count_vowels</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">list</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">9</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 15</strong></p>
+<p class="subheader">Category: <a href="https://tactlabs.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://tactlabs.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://tactlabs.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://tactlabs.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://tactlabs.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>title by <your name></p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

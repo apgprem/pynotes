@@ -6,11 +6,11 @@
 
     <title>Hello</title>
 
-    <link rel="stylesheet" href="/theme/css/normalize.css" />
-    <link rel="stylesheet" href="/theme/css/foundation.min.css" />
-    <link rel="stylesheet" href="/theme/css/style.css" />
-    <link rel="stylesheet" href="/theme/css/pygments.css" />	
-    <script src="/theme/js/modernizr.js"></script>
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://tactlabs.github.io/pynotes/theme/js/modernizr.js"></script>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 <div class="top-bar">
 <div class="row">
     <div class="large-9 large-centered columns">
-	    <h1><a href="">title</a></h1>
+	    <h1><a href="https://tactlabs.github.io/pynotes">title</a></h1>
     </div>
 </div>
 </div>
@@ -44,17 +44,131 @@
     <div class="large-9 columns">
 <article>
     <header>
-        <h3 class="article-title"><a href="/hello.html" rel="bookmark"
+        <h3 class="article-title"><a href="https://tactlabs.github.io/pynotes/hello.html" rel="bookmark"
         title="Permalink to Hello">Hello</a></h3>
     </header>
 
-<h6 class="subheader" title="2026-04-04T00:00:00-04:00">Sat 04 April 2026
+<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
 </h6>
 
 
-    <hr>
-<p><strong>Score: 0</strong></p>
-<p class="subheader">Category: <a href="/category/basics.html">basics</a>
+    <div class="highlight"><pre><span></span><code><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;Code&quot;</span>
+
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>C
+o
+d
+e
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{1, 2, 3, 4}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">}</span>
+
+<span class="n">fruits</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;orange&#39;, &#39;apple&#39;, &#39;banana&#39;}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">}</span>
+
+<span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">numbers</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>  <span class="c1"># No error if element doesn&#39;t exist</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{40, 10, 30}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">languages</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;Go&quot;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">lang</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">Go</span>
+<span class="n">Python</span>
+<span class="n">Java</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Variable assignment</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">price</span> <span class="o">=</span> <span class="mf">199.99</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Python-1&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>   <span class="c1"># Output: 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>   <span class="c1"># Output: 99.99</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>    <span class="c1"># Output: Python</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">15</span>
+<span class="mf">199.99</span>
+<span class="n">Python</span><span class="o">-</span><span class="mf">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.00</span><span class="p">,</span> <span class="s2">&quot;Arun&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># Output: 3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>-1
+-2.0
+Arun
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">value</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 100</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;Reassigned&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: Reassigned</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">100</span>
+<span class="n">Reassigned</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No value assigned yet&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">No</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">assigned</span><span class="w"> </span><span class="n">yet</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">sum_result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">product_result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_result</span><span class="p">)</span>      <span class="c1"># Output: 8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">product_result</span><span class="p">)</span>  <span class="c1"># Output: 15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">8</span>
+<span class="mf">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://tactlabs.github.io/pynotes/category/basics.html">basics</a>
 
 </p>
 
@@ -69,15 +183,15 @@
     <aside class="large-3 columns">
         <h5 class="sidebar-title">Site</h5>
         <ul class="side-nav">
-            <li><a href="/archives.html">Archives</a>
-            <li><a href="/tags.html">Tags</a>
+            <li><a href="https://tactlabs.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://tactlabs.github.io/pynotes/tags.html">Tags</a>
         </ul>
 
 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-            <li><a href="/category/basics.html">basics</a></li>
-            <li><a href="/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://tactlabs.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://tactlabs.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
    
         </ul>
 

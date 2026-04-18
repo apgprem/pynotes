@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Variable Assignment</title>
+
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://tactlabs.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://tactlabs.github.io/pynotes">title</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://tactlabs.github.io/pynotes/variable-assignment.html" rel="bookmark"
+        title="Permalink to Variable Assignment">Variable Assignment</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1"># Variable assignment</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">price</span> <span class="o">=</span> <span class="mf">99.99</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>   <span class="c1"># Output: 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>   <span class="c1"># Output: 99.99</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>    <span class="c1"># Output: Python</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">10</span>
+<span class="mf">99.99</span>
+<span class="n">Python</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 2. Multiple Variable Assignment</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># Output: 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># Output: 3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 3. Reassigning Variables</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: 100</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;Reassigned&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>  <span class="c1"># Output: Reassigned</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">100</span>
+<span class="n">Reassigned</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 4. Numeric Literals</span>
+
+<span class="n">integer_literal</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">float_literal</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">complex_literal</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">integer_literal</span><span class="p">)</span>  <span class="c1"># Output: 42</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">float_literal</span><span class="p">)</span>    <span class="c1"># Output: 3.14</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">complex_literal</span><span class="p">)</span>  <span class="c1"># Output: (2+3j)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">42</span>
+<span class="mf">3.14</span>
+<span class="p">(</span><span class="mf">2</span><span class="o">+</span><span class="mf">3</span><span class="n">j</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 5. String Literals</span>
+<span class="n">single_quote</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">double_quote</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span>
+<span class="n">multi_line</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is</span>
+<span class="s2">a multi-line</span>
+<span class="s2">string&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">single_quote</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">double_quote</span><span class="p">)</span>  
+<span class="nb">print</span><span class="p">(</span><span class="n">multi_line</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello
+World
+This is
+a multi-line
+string
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">is_active</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">is_logged_in</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">is_active</span><span class="p">)</span>      <span class="c1"># Output: True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_logged_in</span><span class="p">)</span>   <span class="c1"># Output: False</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+False
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 7. Special Literal: None</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No value assigned yet&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">No</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">assigned</span><span class="w"> </span><span class="n">yet</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 8. Collection Literals</span>
+
+<span class="n">list_literal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">tuple_literal</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">set_literal</span> <span class="o">=</span> <span class="p">{</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<span class="n">dict_literal</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">list_literal</span><span class="p">)</span>   <span class="c1"># Output: [1, 2, 3]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tuple_literal</span><span class="p">)</span>  <span class="c1"># Output: (4, 5, 6)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set_literal</span><span class="p">)</span>    <span class="c1"># Output: {7, 8, 9}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dict_literal</span><span class="p">)</span>   <span class="c1"># Output: {&#39;a&#39;: 1, &#39;b&#39;: 2}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">[1, 2, 3]</span>
+<span class="na">(4, 5, 6)</span>
+<span class="na">{8, 9, 7}</span>
+<span class="na">{&#39;a&#39;</span><span class="o">:</span><span class="w"> </span><span class="s">1, &#39;b&#39;: 2}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 9. Binary, Octal, and Hexadecimal Literals</span>
+
+<span class="n">binary</span> <span class="o">=</span> <span class="mb">0b1010</span>
+<span class="n">octal</span> <span class="o">=</span> <span class="mo">0o12</span>
+<span class="n">hexadecimal</span> <span class="o">=</span> <span class="mh">0xA</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span>       <span class="c1"># Output: 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">octal</span><span class="p">)</span>        <span class="c1"># Output: 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hexadecimal</span><span class="p">)</span>  <span class="c1"># Output: 10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">10</span>
+<span class="mf">10</span>
+<span class="mf">10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 10. Using Variables in Expressions</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">sum_result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">product_result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_result</span><span class="p">)</span>      <span class="c1"># Output: 8</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">product_result</span><span class="p">)</span>  <span class="c1"># Output: 15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">8</span>
+<span class="mf">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://tactlabs.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://tactlabs.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://tactlabs.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://tactlabs.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://tactlabs.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>title by <your name></p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

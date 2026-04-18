@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Ioop</title>
+
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://tactlabs.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://tactlabs.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://tactlabs.github.io/pynotes">title</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://tactlabs.github.io/pynotes/ioop.html" rel="bookmark"
+        title="Permalink to Ioop">Ioop</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello, Python!
+100
+3.14
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>  
+<span class="c1"># Output: Alice 30</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Alice 30
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;powerful&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot; - &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+<span class="c1"># Output: Python - is - powerful!</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Python - is - powerful!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bob&quot;</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">88</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Student </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> scored </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2"> marks.&quot;</span><span class="p">)</span>
+<span class="c1"># Output: Student Bob scored 88 marks.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Student Bob scored 88 marks.
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">product</span> <span class="o">=</span> <span class="s2">&quot;Laptop&quot;</span>
+<span class="n">price</span> <span class="o">=</span> <span class="mi">1200</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The price of </span><span class="si">{}</span><span class="s2"> is $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">product</span><span class="p">,</span> <span class="n">price</span><span class="p">))</span>
+<span class="c1"># Output: The price of Laptop is $1200</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>The price of Laptop is $1200
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">item</span> <span class="o">=</span> <span class="s2">&quot;Book&quot;</span>
+<span class="n">quantity</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You bought </span><span class="si">%d</span><span class="s2"> </span><span class="si">%s</span><span class="s2">(s).&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">item</span><span class="p">))</span>
+<span class="c1"># Output: You bought 5 Book(s).</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>You bought 5 Book(s).
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello,&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter your name:  prem
+
+
+Hello, prem
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your age: &quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You will be </span><span class="si">{</span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> next year.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nv">Enter</span><span class="w"> </span><span class="nv">your</span><span class="w"> </span><span class="nv">age</span>:<span class="w">  </span><span class="mi">42</span>
+
+
+<span class="nv">You</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="mi">43</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="nv">year</span>.
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter two numbers: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter two numbers:  25 30
+
+
+55
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This text goes into the file.&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data successfully written to output.txt&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Data successfully written to output.txt
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://tactlabs.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://tactlabs.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://tactlabs.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://tactlabs.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://tactlabs.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/<yourusername>/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>title by <your name></p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
