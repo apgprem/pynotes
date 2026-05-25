@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Assign4</title>
+
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://apgprem.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://apgprem.github.io/pynotes">mypythonnotes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://apgprem.github.io/pynotes/assign4.html" rel="bookmark"
+        title="Permalink to Assign4">Assign4</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+    <p>Assignment 4: Number Analyzer with Loops and Comprehension
+Topics covered: Iteration, list comprehension, sort, reverse, membership
+Task: Given a list of numbers, perform analysis using loops and comprehensions.
+pythonnumbers = [12, 7, 25, 3, 18, 9, 30, 14, 6, 21]</p>
+<p>Use a for loop to print each number along with whether it is even or odd.
+Use a list comprehension to create a new list squared containing the square of each number.
+Use a list comprehension with a condition to create evens_only containing only even numbers from numbers.
+Sort numbers in ascending order, then reverse it to get descending order. Print both.
+Check whether 100 is in the list — if not, print "100 is missing".</p>
+<p>Expected list comprehension example:
+pythonevens_only = [n for n in numbers if n % 2 == 0]</p>
+<div class="highlight"><pre><span></span><code><span class="n">pythonnumbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">21</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pythonnumbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Even Number&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Odd Number&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Even Number 12
+Odd Number 7
+Odd Number 25
+Odd Number 3
+Even Number 18
+Odd Number 9
+Even Number 30
+Even Number 14
+Even Number 6
+Odd Number 21
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>    <span class="c1"># print (&quot;sq value&quot;, i ** 2)</span>
+<span class="n">sq_value</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pythonnumbers</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sq_value</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[144, 49, 625, 9, 324, 81, 900, 196, 36, 441]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pythonnumbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Even Number&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Even Number 12
+Even Number 18
+Even Number 30
+Even Number 14
+Even Number 6
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">pythonnumbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">21</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pythonnumbers</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">pythonnumbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">21</span><span class="p">]</span>
+
+<span class="n">pythonnumbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pythonnumbers</span><span class="p">)</span>
+
+<span class="n">pythonnumbers</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pythonnumbers</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">[3, 6, 7, 9, 12, 14, 18, 21, 25, 30]</span>
+<span class="k">[30, 25, 21, 18, 14, 12, 9, 7, 6, 3]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="mi">100</span> <span class="ow">in</span> <span class="n">pythonnumbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;100 is present&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;100 is missing&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">100</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">present</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://apgprem.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/forloop.html">forloop</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/functions.html">functions</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyexchandling.html">pyexchandling</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyfiles.html">pyfiles</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pylabs.html">pylabs</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/apgprem/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/premkumargunasekaran-bengaluru/">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>mypythonnotes by Premkumar Gunasekaran</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

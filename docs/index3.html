@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>mypythonnotes</title>
+
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://apgprem.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://apgprem.github.io/pynotes">mypythonnotes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/functions-asmt.html"><h3 class="article-title">Functions Asmt</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="k">return</span><span class="p">(</span><span class="s2">&quot;hello Python&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>hello Python
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello,&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;python!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>hello, python!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">36</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;enter a value:&quot;</span><span class="p">)</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>enter a value: 6
+
+
+6
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">abc</span><span class="p">(</span><span class="n">square</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">square …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/functions.html">functions</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/functions-asmt.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/globalkeyword.html"><h3 class="article-title">Globalkeyword</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">value</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">value</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># UnboundLocalError</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">counter</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">increment</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;inactive&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">activate</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">status</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;active&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">show_status</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+
+<span class="n">activate</span><span class="p">()</span>
+<span class="n">show_status</span><span class="p">()</span>  <span class="c1"># Output: active</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>active
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 1 Basic Use of Global Variable</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">():</span>
+    <span class="c1"># count = 101 …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/globalkeyword.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/hello.html"><h3 class="article-title">Hello</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;Code&quot;</span>
+
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>C
+o
+d
+e
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>  <span class="c1"># Output: {1, 2, 3, 4}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{1, 2, 3, 4}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">}</span>
+
+<span class="n">fruits</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;orange&#39;, &#39;apple&#39;, &#39;banana&#39;}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">}</span>
+
+<span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">numbers …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/hello.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/ifs.html"><h3 class="article-title">Ifs</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="o">-</span><span class="mi">18</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eligible to vote&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">temperature</span> <span class="o">=</span> <span class="mi">26</span>
+
+<span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s warm outside&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s cold outside&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>It&#39;s warm outside
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">score</span> <span class="o">=</span> <span class="mi">55</span>
+
+<span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grade: A&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">75</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grade: B&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grade: C&quot;</span><span class="p">)</span>
+<span class="k">else …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/ifs.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/inheritance.html"><h3 class="article-title">Inheritance</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. What is Inheritance - Inheritance allows a class (child) to acquire properties and behaviors of another class (parent).</span>
+<span class="c1"># - Promotes code reusability and hierarchical design.</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Animal is eating&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
+<span class="n">d</span><span class="o">.</span><span class="n">eat</span><span class="p">()</span>  <span class="c1"># Inherited method</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Animal is eating
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 2. Single Inheritance - A …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/inheritance.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/ioop.html"><h3 class="article-title">Ioop</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello, Python!
+100
+3.14
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>  
+<span class="c1"># Output: Alice 30</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Alice 30
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;powerful&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot; - &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+<span class="c1"># Output: Python - is - powerful!</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Python - is - powerful!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bob&quot;</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">88</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Student </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> scored </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2"> marks.&quot;</span><span class="p">)</span>
+<span class="c1"># Output …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/ioop.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/multipleinherit.html"><h3 class="article-title">Multipleinherit</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. What is Multiple Inheritance - Multiple inheritance occurs when a class inherits from more than one parent class.</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Father</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">skill1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Driving&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Mother</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">skill2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cooking&quot;</span><span class="p">)</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Father</span><span class="p">,</span> <span class="n">Mother</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">Child</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">skill1</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">skill2</span><span class="p">()</span>
+
+<span class="c1"># - The child class gains features from all …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/multipleinherit.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/objnclasses.html"><h3 class="article-title">Objnclasses</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. What is a Class and an Object</span>
+<span class="c1">#        A class is a blueprint for creating objects. An object is an instance of a class.</span>
+<span class="c1"># Classes define structure; objects represent real entities.</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;__main__.Person object at 0x7d6d9023e2d0&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 2. Defining a Class with Attributes - Attributes …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/objnclasses.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/operators.html"><h3 class="article-title">Operators</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Addition → 13</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Subtraction → 7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Multiplication → 30</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Division → 3.333...</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Floor Division → 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Modulus → 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Exponentiation → 1000</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">13</span>
+<span class="mf">7</span>
+<span class="mf">30</span>
+<span class="mf">3.3333333333333335</span>
+<span class="mf">3</span>
+<span class="mf">1</span>
+<span class="mf">1000</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/operators.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/optoroverloading.html"><h3 class="article-title">Optoroverloading</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. What is Operator Overloading</span>
+<span class="c1"># Operator overloading allows custom classes to define how standard operators behave using special (dunder) methods.</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Number</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span>
+
+<span class="n">n1</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="p">)</span>  <span class="c1"># Output: 30</span>
+
+<span class="c1"># The …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/optoroverloading.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 3 of 4</h6>
+
+<p>
+            <a href="https://apgprem.github.io/pynotes/index2.html">&laquo; Prev</a>
+
+        <a href="https://apgprem.github.io/pynotes/index4.html">Next &raquo;</a>
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://apgprem.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/forloop.html">forloop</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/functions.html">functions</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyexchandling.html">pyexchandling</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyfiles.html">pyfiles</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pylabs.html">pylabs</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/apgprem/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/premkumargunasekaran-bengaluru/">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>mypythonnotes by Premkumar Gunasekaran</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

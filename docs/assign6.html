@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Assign6</title>
+
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://apgprem.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://apgprem.github.io/pynotes">mypythonnotes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://apgprem.github.io/pynotes/assign6.html" rel="bookmark"
+        title="Permalink to Assign6">Assign6</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+    <p>ssignment 6: Temperature Tracker (Min, Max, Average)
+Topics covered: Iteration, built-in functions, slicing
+Task: A weather station recorded daily temperatures (in °C) for a week.
+pythontemperatures = [22, 25, 19, 30, 28, 21, 24]</p>
+<p>Print the highest and lowest temperature using max() and min().
+Calculate and print the average temperature using sum() and len().
+Print the temperatures of the first 3 days (weekdays start) using slicing.
+Print the temperatures of the weekend (last 2 days) using negative slicing.
+Use a for loop to print each day's temperature with a label like "Day 1: 22°C".
+Use a list comprehension to create hot_days containing only temperatures above 25.</p>
+<div class="highlight"><pre><span></span><code><span class="n">pythontemperatures</span> <span class="o">=</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
+<span class="c1"># pythontemperatures.min()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">pythontemperatures</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">pythontemperatures</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">19</span>
+<span class="mf">30</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">sum_list</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">pythontemperatures</span><span class="p">)</span>
+<span class="n">len_list</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pythontemperatures</span><span class="p">)</span>
+
+<span class="n">avg</span> <span class="o">=</span> <span class="n">sum_list</span><span class="o">/</span><span class="n">len_list</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">24.142857142857142</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temp of first 3 days&quot;</span><span class="p">,</span> <span class="n">pythontemperatures</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Temp of first 3 days [22, 25, 19]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temp of last 2 days&quot;</span><span class="p">,</span> <span class="n">pythontemperatures</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Temp of last 2 days [21, 24]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pythontemperatures</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Day </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s2">°C&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Day 0: 22°C
+Day 1: 25°C
+Day 2: 19°C
+Day 3: 30°C
+Day 4: 28°C
+Day 5: 21°C
+Day 6: 24°C
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pythontemperatures</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Day </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s2">°C&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Day 1: 22°C
+Day 2: 25°C
+Day 3: 19°C
+Day 4: 30°C
+Day 5: 28°C
+Day 6: 21°C
+Day 7: 24°C
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">temp</span> <span class="ow">in</span> <span class="p">(</span><span class="n">pythontemperatures</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Day </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s2">°C&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">---------------------------------------------------------------------------</span>
+
+<span class="c">TypeError                                 Traceback (most recent call last)</span>
+
+<span class="c">Cell In</span><span class="k">[</span><span class="c">19</span><span class="k">]</span><span class="nt">,</span><span class="c"> line 1</span>
+<span class="nb">----</span><span class="nv">&gt;</span><span class="c"> 1 for index</span><span class="nt">,</span><span class="c"> temp in (pythontemperatures):</span>
+<span class="c">      2     print(f&quot;Day {index}: {temp}°C&quot;)</span>
+
+
+<span class="c">TypeError: cannot unpack non</span><span class="nb">-</span><span class="c">iterable int object</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">pythontemperatures</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">temp</span><span class="o">&gt;</span><span class="mi">25</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">temp</span><span class="si">}</span><span class="s2">°C&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">30</span><span class="err">°</span><span class="n">C</span>
+<span class="mf">28</span><span class="err">°</span><span class="n">C</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://apgprem.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/forloop.html">forloop</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/functions.html">functions</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyexchandling.html">pyexchandling</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyfiles.html">pyfiles</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pylabs.html">pylabs</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/apgprem/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/premkumargunasekaran-bengaluru/">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>mypythonnotes by Premkumar Gunasekaran</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

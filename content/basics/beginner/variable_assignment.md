@@ -1,14 +1,14 @@
 ---
 title: Variable Assignment
-date: 2026-04-18
+date: 2026-05-23
 author: Your Name
-cell_count: 11
-score: 10
+cell_count: 19
+score: 15
 ---
 
 ```python
 # Variable assignment
-count = 10
+count = 1
 price = 99.99
 name = "Python"
 
@@ -180,9 +180,129 @@ print(product_result)  # Output: 15
 
 
 ```python
+print("Python", "is", "powerful", sep=" * ", end="!")
+# Output: Python - is - powerful!
+```
+
+    Python * is * powerful!
+
+
+```python
+name = "Bob"
+score = 88
+
+print(f"Student {name} scored {score} marks.")
+# Output: Student Bob scored 88 marks.
+```
+
+    Student Bob scored 88 marks.
+
+
+
+```python
+product = "Laptop"
+price = 1200
+
+print("The price of {} is ${}".format(product, price))
+# Output: The price of Laptop is $1200
+```
+
+    The price of Laptop is $1200
+
+
+
+```python
+age = int(input("Enter your age: "))
+
+print(f"You will be {age + 5} next year.")
+```
+
+    Enter your age:  40
+
+
+    You will be 45 next year.
+
+
+
+```python
+numbers = input("Enter two numbers: ").split()
+
+num1 = int(numbers[0])
+num2 = int(numbers[1])
+num3 = int(numbers[2])
+
+print(num1 + num2 + num3)
+
+```
+
+    Enter two numbers:  10 15 20
+
+
+    45
+
+
+
+```python
+with open("output.txt", "w") as file:
+    print("This text goes into the file.", file=file)
+
+print("Data successfully written to output.txt")
+```
+
+    Data successfully written to output.txt
+
+
+
+```python
+a = 10
+b = 3
+
+print(a + b)   # Addition → 13
+print(a - b)   # Subtraction → 7
+print(a * b)   # Multiplication → 30
+print(a / b)   # Division → 3.333...
+print(a // b)  # Floor Division → 3
+print(a % b)   # Modulus → 1
+print(a ** b)  # Exponentiation → 1000
+```
+
+    13
+    7
+    30
+    3.3333333333333335
+    3
+    1
+    1000
+
+
+
+```python
+a = 10
+b = 3
+
+print(a + b)   # Addition → 13
+print(a - b)   # Subtraction → 7
+print(a * b)   # Multiplication → 30
+print(a / b)   # Division → 3.333...
+print(a // b)  # Floor Division → 3
+print(a % b)   # Modulus → 1
+print(a ** b)  # Exponentiation → 1000
+```
+
+    13
+    7
+    30
+    3.3333333333333335
+    3
+    1
+    1000
+
+
+
+```python
 
 ```
 
 
 ---
-**Score: 10**
+**Score: 15**

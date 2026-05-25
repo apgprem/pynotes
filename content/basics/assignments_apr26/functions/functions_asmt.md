@@ -1,8 +1,8 @@
 ---
 title: Functions Asmt
-date: 2026-04-18
+date: 2026-05-23
 author: Your Name
-cell_count: 17
+cell_count: 19
 score: 15
 ---
 
@@ -138,7 +138,7 @@ print(factorial(10))
 ```python
 def factorial(n):
     result = 1
-    for i in range(2, n+1):
+    for i in range(1, n+1):
         result *= i
     return result
 x = print(factorial(5))
@@ -153,10 +153,10 @@ print(x)
 ```python
 def count_vowels(s: str):
     return sum(1 for char in s if char.lower() in "aeiou")
-print(count_vowels("Hello World"))
+print(count_vowels("Hello World! hello India"))
 ```
 
-    3
+    8
 
 
 
@@ -189,6 +189,25 @@ print(rev("Angela"))
 ```
 
     alegnA
+
+
+
+```python
+
+```
+
+
+```python
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+print(factorial(5))
+```
+
+    120
 
 
 

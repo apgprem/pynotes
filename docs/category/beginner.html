@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>mypythonnotes - basics</title>
+    <title>mypythonnotes - beginner</title>
 
     <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/foundation.min.css" />
@@ -47,7 +47,7 @@
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/age-calculator.html"><h3 class="article-title">Age-Calculator</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
 </h6>
 
 
@@ -75,7 +75,7 @@
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
 
 </p>
 
@@ -91,50 +91,36 @@
 
 
             <article>
-                <a href="https://apgprem.github.io/pynotes/forloop.html"><h3 class="article-title">Forloop</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+                <a href="https://apgprem.github.io/pynotes/csvfilereading.html"><h3 class="article-title">Csvfilereading</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
-<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;abc.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>apple
-banana
-orange
-5
-5
-7.6
+<div class="highlight"><pre><span></span><code><span class="k">[&#39;name&#39;, &#39;age&#39;, &#39;city&#39;]</span>
+<span class="k">[&#39;Alice&#39;, &#39;25&#39;, &#39;New York&#39;]</span>
+<span class="k">[&#39;Bob&#39;, &#39;30&#39;, &#39;London&#39;]</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
-<div class="highlight"><pre><span></span><code><span class="mf">0</span>
-<span class="mf">1</span>
-<span class="mf">2</span>
-<span class="mf">3</span>
-<span class="mf">4</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;abc.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>  <span class="c1"># Skip header</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/forloop.html">Read More</a>
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/csvfilereading.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -142,57 +128,55 @@ orange
 
 
             <article>
-                <a href="https://apgprem.github.io/pynotes/functions-asmt.html"><h3 class="article-title">Functions Asmt</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+                <a href="https://apgprem.github.io/pynotes/globalkeyword.html"><h3 class="article-title">Globalkeyword</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
-    <span class="k">return</span><span class="p">(</span><span class="s2">&quot;hello Python&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">value</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">())</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">value</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># UnboundLocalError</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>hello Python
+<div class="highlight"><pre><span></span><code><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">counter</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">increment</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>  <span class="c1"># Output: 1</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello,&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;inactive&quot;</span>
 
-<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;python!&quot;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">activate</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">status</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;active&quot;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">show_status</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+
+<span class="n">activate</span><span class="p">()</span>
+<span class="n">show_status</span><span class="p">()</span>  <span class="c1"># Output: active</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>hello, python!
+<div class="highlight"><pre><span></span><code>active
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1 Basic Use of Global Variable</span>
 
-<div class="highlight"><pre><span></span><code><span class="mf">36</span>
-</code></pre></div>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">10</span>
 
-<div class="highlight"><pre><span></span><code><span class="n">y</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;enter a value:&quot;</span><span class="p">)</span>
-
-
-<span class="n">x</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>enter a value: 6
-
-
-6
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">abc</span><span class="p">(</span><span class="n">square</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">square …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">():</span>
+    <span class="c1"># count = 101 …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/functions-asmt.html">Read More</a>
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/globalkeyword.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -201,7 +185,7 @@ orange
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/hello.html"><h3 class="article-title">Hello</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
 </h6>
 
 
@@ -236,7 +220,7 @@ e
 <div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">}</span>
 
 <span class="n">numbers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">numbers …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
+<span class="n">numbers …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
 
 </p>
 
@@ -251,7 +235,7 @@ e
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/ifs.html"><h3 class="article-title">Ifs</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
 </h6>
 
 
@@ -280,7 +264,7 @@ e
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grade: B&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grade: C&quot;</span><span class="p">)</span>
-<span class="k">else …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
+<span class="k">else …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
 
 </p>
 
@@ -295,7 +279,7 @@ e
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/ioop.html"><h3 class="article-title">Ioop</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
 </h6>
 
 
@@ -330,7 +314,7 @@ e
 <span class="n">score</span> <span class="o">=</span> <span class="mi">88</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Student </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> scored </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2"> marks.&quot;</span><span class="p">)</span>
-<span class="c1"># Output …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
+<span class="c1"># Output …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
 
 </p>
 
@@ -345,7 +329,7 @@ e
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/operators.html"><h3 class="article-title">Operators</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
 </h6>
 
 
@@ -370,7 +354,7 @@ e
 <span class="mf">1000</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">x …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
+<div class="highlight"><pre><span></span><code><span class="n">x …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
 
 </p>
 
@@ -384,13 +368,81 @@ e
 
 
             <article>
+                <a href="https://apgprem.github.io/pynotes/recursion.html"><h3 class="article-title">Recursion</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/recursion.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/untitled.html"><h3 class="article-title">Untitled</h3></a>
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">current_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">current_dir</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>/home/prem/kact/pynotes/notebooks/basics
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:/Projects&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">---------------------------------------------------------------------------</span>
+
+<span class="ne">FileNotFoundError</span>                         <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+      <span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+      <span class="mi">2</span> 
+<span class="o">----&gt;</span> <span class="mi">3</span> <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:/Projects&quot;</span><span class="p">)</span>
+      <span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+
+
+<span class="ne">FileNotFoundError</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">2</span><span class="p">]</span> <span class="n">No …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/untitled.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://apgprem.github.io/pynotes/variable-assignment.html"><h3 class="article-title">Variable Assignment</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
 </h6>
 
 
 <div class="highlight"><pre><span></span><code><span class="c1"># Variable assignment</span>
-<span class="n">count</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">price</span> <span class="o">=</span> <span class="mf">99.99</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
 
@@ -414,7 +466,7 @@ e
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code><span class="mf">1</span>
-<span class="mf">2 …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
+<span class="mf">2 …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
 
 </p>
 
@@ -424,52 +476,13 @@ e
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://apgprem.github.io/pynotes/variable-conv-assignment.html"><h3 class="article-title">Variable Conv Assignment</h3></a>
-<h6 class="subheader" title="2026-04-18T00:00:00-04:00">Sat 18 April 2026
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># 1. Implicit Type Conversion (Type Coercion)</span>
-
-<span class="n">integer_value</span> <span class="o">=</span> <span class="mi">10</span>       <span class="c1"># int</span>
-<span class="n">float_value</span> <span class="o">=</span> <span class="mf">3.5</span>       <span class="c1"># float</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">integer_value</span> <span class="o">+</span> <span class="n">float_value</span>  <span class="c1"># int + float → float</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>           <span class="c1"># Output: 13.5</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>     <span class="c1"># Output: &lt;class &#39;float&#39;&gt;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">13.5</span>
-<span class="o">&lt;</span><span class="n">class</span><span class="w"> </span><span class="err">&#39;</span><span class="n">float</span><span class="err">&#39;</span><span class="o">&gt;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">float_value</span> <span class="o">=</span> <span class="mf">9.99</span>
-<span class="n">string_value</span> <span class="o">=</span> <span class="s2">&quot;42&quot;</span>
-
-<span class="n">int_from_float</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">float_value</span><span class="p">)</span>
-<span class="n">int_from_string</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">string_value</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">int_from_float</span><span class="p">)</span>    <span class="c1"># Output: 9   (fraction …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/variable-conv-assignment.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
+<h6 class="subheader">Page 1 of 2</h6>
 
 <p>
 
+        <a href="https://apgprem.github.io/pynotes/category/beginner2.html">Next &raquo;</a>
 </p>
 </div>
 
@@ -487,8 +500,15 @@ e
 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-            <li><a href="https://apgprem.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/forloop.html">forloop</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/functions.html">functions</a></li>
             <li><a href="https://apgprem.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyexchandling.html">pyexchandling</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyfiles.html">pyfiles</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pylabs.html">pylabs</a></li>
    
         </ul>
 

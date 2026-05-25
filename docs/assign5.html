@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Assign5</title>
+
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://apgprem.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://apgprem.github.io/pynotes">mypythonnotes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://apgprem.github.io/pynotes/assign5.html" rel="bookmark"
+        title="Permalink to Assign5">Assign5</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-05-23T00:00:00-04:00">Sat 23 May 2026
+</h6>
+
+
+    <p>Assignment 5: Mini Library Catalog (Combined Operations)
+Topics covered: Everything — creating, slicing, modifying, adding, removing, iterating, comprehension, sorting
+Task: Build a small library catalog system.</p>
+<p>Create a list of 6 book titles:</p>
+<p>python   library = ["Python 101", "Data Structures", "Web Dev", "AI Basics", "ML Guide", "Networking"]</p>
+<p>Print the catalog using a for loop with each book numbered (e.g., 1. Python 101).
+A new book "Cloud Computing" arrives — add it at index 2.
+The book "Networking" is no longer available — remove it.
+Use a list comprehension to create a new list short_titles containing only books with fewer than 10 characters in their title.
+Sort the library alphabetically and print it.
+Slice and print only the middle 3 books of the sorted library.
+Finally, print the total number of books in the catalog.</p>
+<p>Bonus challenge: Use a list comprehension to create upper_titles where every book title is in UPPERCASE.</p>
+<div class="highlight"><pre><span></span><code><span class="n">library</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Python 101&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Structures&quot;</span><span class="p">,</span> <span class="s2">&quot;Web Dev&quot;</span><span class="p">,</span> <span class="s2">&quot;AI Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;ML Guide&quot;</span><span class="p">,</span> <span class="s2">&quot;Networking&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">library</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Python 101
+Data Structures
+Web Dev
+AI Basics
+ML Guide
+Networking
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">library</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;Cloud Computing&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">library</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;Python 101&#39;, &#39;Data Structures&#39;, &#39;Cloud Computing&#39;, &#39;AI Basics&#39;, &#39;ML Guide&#39;, &#39;Networking&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">library</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Networking&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">library</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;Python 101&#39;, &#39;Data Structures&#39;, &#39;Cloud Computing&#39;, &#39;AI Basics&#39;, &#39;ML Guide&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">library</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Python 101&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Structures&quot;</span><span class="p">,</span> <span class="s2">&quot;Web Dev&quot;</span><span class="p">,</span> <span class="s2">&quot;AI Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;ML Guide&quot;</span><span class="p">,</span> <span class="s2">&quot;Networking&quot;</span><span class="p">]</span>
+<span class="c1"># len_lib = len(library)</span>
+<span class="c1"># print(len_lib)</span>
+<span class="n">short_titles</span> <span class="o">=</span> <span class="p">[</span><span class="n">book</span> <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">library</span> 
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">short_titles</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;Web Dev&#39;, &#39;AI Basics&#39;, &#39;ML Guide&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">library</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">library</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;AI Basics&#39;, &#39;Data Structures&#39;, &#39;ML Guide&#39;, &#39;Networking&#39;, &#39;Python 101&#39;, &#39;Web Dev&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">library</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">library</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;ML Guide&#39;, &#39;Networking&#39;, &#39;Python 101&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># library.count()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">library</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">6</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># print(upper(library))</span>
+<span class="n">library</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Python 101&quot;</span><span class="p">,</span> <span class="s2">&quot;Data Structures&quot;</span><span class="p">,</span> <span class="s2">&quot;Web Dev&quot;</span><span class="p">,</span> <span class="s2">&quot;AI Basics&quot;</span><span class="p">,</span> <span class="s2">&quot;ML Guide&quot;</span><span class="p">,</span> <span class="s2">&quot;Networking&quot;</span><span class="p">]</span>
+<span class="n">upperlib</span> <span class="o">=</span> <span class="p">[</span><span class="n">books</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">books</span> <span class="ow">in</span> <span class="n">library</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">upperlib</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;PYTHON 101&#39;, &#39;DATA STRUCTURES&#39;, &#39;WEB DEV&#39;, &#39;AI BASICS&#39;, &#39;ML GUIDE&#39;, &#39;NETWORKING&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://apgprem.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/forloop.html">forloop</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/functions.html">functions</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyexchandling.html">pyexchandling</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyfiles.html">pyfiles</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pylabs.html">pylabs</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/apgprem/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/premkumargunasekaran-bengaluru/">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>mypythonnotes by Premkumar Gunasekaran</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
