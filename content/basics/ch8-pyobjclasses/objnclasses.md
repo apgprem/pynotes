@@ -1,6 +1,6 @@
 ---
 title: Objnclasses
-date: 2026-05-23
+date: 2026-05-25
 author: Your Name
 cell_count: 11
 score: 10
@@ -85,12 +85,12 @@ class Student:
 s1 = Student("Alice")
 s2 = Student("Bob")
 
-print(s1.school)
-print(s2.school)
+print(s1.name, s1.school)
+print(s2.name, s2.school)
 ```
 
-    Global Academy
-    Global Academy
+    Alice Global Academy
+    Bob Global Academy
 
 
 
