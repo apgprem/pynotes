@@ -48,7 +48,7 @@
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/functions-asmt.html"><h3 class="article-title">Functions Asmt</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
 </h6>
 
 
@@ -106,7 +106,7 @@
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/globalkeyword.html"><h3 class="article-title">Globalkeyword</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
 </h6>
 
 
@@ -162,7 +162,7 @@
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/hello.html"><h3 class="article-title">Hello</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
 </h6>
 
 
@@ -212,7 +212,7 @@ e
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/ifs.html"><h3 class="article-title">Ifs</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
 </h6>
 
 
@@ -256,7 +256,7 @@ e
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/inheritance.html"><h3 class="article-title">Inheritance</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
 </h6>
 
 
@@ -292,7 +292,7 @@ e
 
             <article>
                 <a href="https://apgprem.github.io/pynotes/ioop.html"><h3 class="article-title">Ioop</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
 </h6>
 
 
@@ -341,8 +341,124 @@ e
 
 
             <article>
+                <a href="https://apgprem.github.io/pynotes/json.html"><h3 class="article-title">Json</h3></a>
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
+</h6>
+
+
+<ol>
+<li>What is JSON</li>
+</ol>
+<p>JSON (JavaScript Object Notation) is a lightweight data-interchange format used for storing and exchanging structured data.</p>
+<p>{
+  "name": "Alice",
+  "age": 30,
+  "active": true
+}</p>
+<p>In Python, JSON is handled using the built-in json module.</p>
+<ol>
+<li>Importing the JSON Module</li>
+</ol>
+<p>import json</p>
+<p>Provides methods to convert between Python objects and JSON …</p><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch11-atopics.html">ch11-atopics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/json.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/lambdafn.html"><h3 class="article-title">Lambdafn</h3></a>
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">square</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 25</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">25</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Output: 20</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">20</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">squares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">numbers</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch09-pat.html">ch09-pat</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/lambdafn.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://apgprem.github.io/pynotes/listcomprehension.html"><h3 class="article-title">Listcomprehension</h3></a>
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 1, 4, 9, 16]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 1, 4, 9, 16]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">even_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">even_numbers</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[0, 2, 4, 6, 8 …</code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch09-pat.html">ch09-pat</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/listcomprehension.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://apgprem.github.io/pynotes/multipleinherit.html"><h3 class="article-title">Multipleinherit</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
 </h6>
 
 
@@ -372,116 +488,9 @@ e
                 <hr  class="gradient"/>
             </article>
 
-        
-
-
-            <article>
-                <a href="https://apgprem.github.io/pynotes/objnclasses.html"><h3 class="article-title">Objnclasses</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># 1. What is a Class and an Object</span>
-<span class="c1">#        A class is a blueprint for creating objects. An object is an instance of a class.</span>
-<span class="c1"># Classes define structure; objects represent real entities.</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
-    <span class="k">pass</span>
-
-<span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>&lt;__main__.Person object at 0x7d6d9023e2d0&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># 2. Defining a Class with Attributes - Attributes …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/objnclasses.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://apgprem.github.io/pynotes/operators.html"><h3 class="article-title">Operators</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Addition → 13</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Subtraction → 7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Multiplication → 30</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Division → 3.333...</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Floor Division → 3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>   <span class="c1"># Modulus → 1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># Exponentiation → 1000</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">13</span>
-<span class="mf">7</span>
-<span class="mf">30</span>
-<span class="mf">3.3333333333333335</span>
-<span class="mf">3</span>
-<span class="mf">1</span>
-<span class="mf">1000</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">x …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/operators.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://apgprem.github.io/pynotes/optoroverloading.html"><h3 class="article-title">Optoroverloading</h3></a>
-<h6 class="subheader" title="2026-05-25T00:00:00-04:00">Mon 25 May 2026
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># 1. What is Operator Overloading</span>
-<span class="c1"># Operator overloading allows custom classes to define how standard operators behave using special (dunder) methods.</span>
-
-<span class="k">class</span><span class="w"> </span><span class="nc">Number</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">value</span>
-
-<span class="n">n1</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">n2</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span><span class="p">)</span>  <span class="c1"># Output: 30</span>
-
-<span class="c1"># The …</span></code></pre></div><p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://apgprem.github.io/pynotes/optoroverloading.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 3 of 4</h6>
+<h6 class="subheader">Page 3 of 5</h6>
 
 <p>
             <a href="https://apgprem.github.io/pynotes/index2.html">&laquo; Prev</a>
@@ -504,11 +513,14 @@ e
 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
-            <li><a href="https://apgprem.github.io/pynotes/category/assignments_apr26.html">assignments_apr26</a></li>
             <li><a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch09-pat.html">ch09-pat</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch11-atopics.html">ch11-atopics</a></li>
             <li><a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a></li>
             <li><a href="https://apgprem.github.io/pynotes/category/forloop.html">forloop</a></li>
             <li><a href="https://apgprem.github.io/pynotes/category/functions.html">functions</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/may26.html">may26</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/objclasses.html">objclasses</a></li>
             <li><a href="https://apgprem.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
             <li><a href="https://apgprem.github.io/pynotes/category/pyexchandling.html">pyexchandling</a></li>
             <li><a href="https://apgprem.github.io/pynotes/category/pyfiles.html">pyfiles</a></li>

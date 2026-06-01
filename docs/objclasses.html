@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Objclasses</title>
+
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://apgprem.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://apgprem.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://apgprem.github.io/pynotes">mypythonnotes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://apgprem.github.io/pynotes/objclasses.html" rel="bookmark"
+        title="Permalink to Objclasses">Objclasses</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-06-01T00:00:00-04:00">Mon 01 June 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">dog</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;tiger&quot;</span>
+    <span class="n">breed</span> <span class="o">=</span> <span class="s2">&quot;Kombai&quot;</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">dog</span><span class="p">()</span>
+<span class="c1"># print(str(d))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">breed</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>tiger
+Kombai
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">book</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># print(f&quot;Title is:{self.title}&quot;)</span>
+        <span class="c1"># print(f&quot;Author is: {self.author}&quot;)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Title and Author is:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="n">b1</span> <span class="o">=</span> <span class="n">book</span><span class="p">(</span><span class="s2">&quot;My Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Prem&quot;</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">book</span><span class="p">(</span><span class="s2">&quot;FastAPI&quot;</span><span class="p">,</span><span class="s2">&quot;FastAPI by prem&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Book1 details&quot;</span><span class="p">)</span>
+<span class="n">b1</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Book2 details&quot;</span><span class="p">)</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Book1 details
+Title and Author is:My Python, Prem
+Book2 details
+Title and Author is:FastAPI, FastAPI by prem
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Book</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
+
+
+<span class="n">book1</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s2">&quot;The God of Small Things&quot;</span><span class="p">,</span> <span class="s2">&quot;Arundhati Roy&quot;</span><span class="p">)</span>
+<span class="n">book2</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s2">&quot;Midnight&#39;s Children&quot;</span><span class="p">,</span> <span class="s2">&quot;Salman Rushdie&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Book 1: </span><span class="si">{</span><span class="n">book1</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book1</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Book 2: </span><span class="si">{</span><span class="n">book2</span><span class="o">.</span><span class="n">title</span><span class="si">}</span><span class="s2"> by </span><span class="si">{</span><span class="n">book2</span><span class="o">.</span><span class="n">author</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Book 1: The God of Small Things by Arundhati Roy
+Book 2: Midnight&#39;s Children by Salman Rushdie
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">circle</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">radius</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">circle</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">radius</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">area</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">5</span>
+<span class="mf">78.5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Student</span><span class="p">:</span>
+    <span class="c1"># def __init__(self, school)</span>
+    <span class="n">school</span> <span class="o">=</span> <span class="s2">&quot;Sunrise School&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">student_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">student_name</span> <span class="o">=</span> <span class="n">student_name</span>
+
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Aswin&quot;</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Briha&quot;</span><span class="p">)</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="s2">&quot;Sarvatha&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s1</span><span class="o">.</span><span class="n">school</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">s1</span><span class="o">.</span><span class="n">student_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s2</span><span class="o">.</span><span class="n">school</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">s2</span><span class="o">.</span><span class="n">student_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s3</span><span class="o">.</span><span class="n">school</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">s3</span><span class="o">.</span><span class="n">student_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Sunrise School, Aswin
+Sunrise School, Briha
+Sunrise School, Sarvatha
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Laptop</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">brand</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">brand</span> <span class="o">=</span> <span class="n">brand</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+
+<span class="n">L1</span> <span class="o">=</span> <span class="n">Laptop</span><span class="p">(</span><span class="s2">&quot;HP&quot;</span><span class="p">,</span> <span class="mi">60000</span><span class="p">)</span>
+<span class="n">L2</span> <span class="o">=</span> <span class="n">Laptop</span><span class="p">(</span><span class="s2">&quot;Dell&quot;</span><span class="p">,</span> <span class="mi">70000</span><span class="p">)</span>
+<span class="n">L3</span> <span class="o">=</span> <span class="n">Laptop</span><span class="p">(</span><span class="s2">&quot;Mac&quot;</span><span class="p">,</span> <span class="mi">150000</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">L1</span><span class="o">.</span><span class="n">brand</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">L1</span><span class="o">.</span><span class="n">price</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">L2</span><span class="o">.</span><span class="n">brand</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">L2</span><span class="o">.</span><span class="n">price</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">L3</span><span class="o">.</span><span class="n">brand</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">L3</span><span class="o">.</span><span class="n">price</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>HP, 60000
+Dell, 70000
+Mac, 150000
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Employee</span><span class="p">:</span>
+     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">salary</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="o">=</span> <span class="n">salary</span>
+
+<span class="n">emp</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s2">&quot;Aswin&quot;</span><span class="p">,</span> <span class="mi">25000</span><span class="p">)</span>
+
+<span class="n">emp</span><span class="o">.</span><span class="n">salary</span> <span class="o">=</span> <span class="mi">50000</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">emp</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">emp</span><span class="o">.</span><span class="n">salary</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Aswin, 50000
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">person</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hi, I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> and I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+        <span class="c1"># print(f&quot;Hi, I am {p2.name} and I am {p2.age} years old.&quot;)</span>
+
+<span class="n">p1</span> <span class="o">=</span> <span class="n">person</span><span class="p">(</span><span class="s2">&quot;aswin&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">person</span><span class="p">(</span><span class="s2">&quot;Rajat&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">introduce</span><span class="p">()</span>
+<span class="n">p2</span><span class="o">.</span><span class="n">introduce</span><span class="p">()</span>
+<span class="c1"># introduce()</span>
+
+<span class="c1"># print(p1.introduce())</span>
+<span class="c1"># print(p2.introduce())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hi, I am aswin and I am 25 years old.
+Hi, I am Rajat and I am 20 years old.
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">product</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">product</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">p</span><span class="o">.</span><span class="n">price</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">price</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error occurred:&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Error occurred: &#39;product&#39; object has no attribute &#39;price&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">car</span><span class="p">:</span>
+    <span class="k">pass</span>
+    <span class="c1"># def isinstance():</span>
+    <span class="c1">#     pass</span>
+
+    <span class="c1"># def type(self):</span>
+    <span class="c1">#     pass</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">car</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">car</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+&lt;class &#39;__main__.car&#39;&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">car</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">car</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">car</span><span class="p">))</span>  <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>              <span class="c1"># &lt;class &#39;__main__.User&#39;&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+&lt;class &#39;__main__.car&#39;&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BankAccount</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">balance</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">owner</span> <span class="o">=</span> <span class="n">owner</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">+=</span> <span class="n">amount</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-=</span> <span class="n">amount</span>
+
+<span class="n">BA</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">(</span><span class="s2">&quot;Aswin&quot;</span><span class="p">,</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="n">BA</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="n">BA</span><span class="o">.</span><span class="n">withdraw</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">BA</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1550</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://apgprem.github.io/pynotes/category/objclasses.html">objclasses</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://apgprem.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://apgprem.github.io/pynotes/category/beginner.html">beginner</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch09-pat.html">ch09-pat</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch11-atopics.html">ch11-atopics</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/ch8-pyobjclasses.html">ch8-pyobjclasses</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/forloop.html">forloop</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/functions.html">functions</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/may26.html">may26</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/objclasses.html">objclasses</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyexchandling.html">pyexchandling</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pyfiles.html">pyfiles</a></li>
+            <li><a href="https://apgprem.github.io/pynotes/category/pylabs.html">pylabs</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/apgprem/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/premkumargunasekaran-bengaluru/">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>mypythonnotes by Premkumar Gunasekaran</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
