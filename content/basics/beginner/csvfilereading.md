@@ -1,6 +1,6 @@
 ---
 title: Csvfilereading
-date: 2026-06-01
+date: 2026-06-26
 author: Your Name
 cell_count: 9
 score: 5
